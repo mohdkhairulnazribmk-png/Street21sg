@@ -33,13 +33,28 @@ body {
   align-items: center;
 }
 
-.logo {
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.logo-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
   font-weight: 900;
   font-size: 1.3rem;
   letter-spacing: 1px;
 }
 
-.logo .accent { color: var(--accent); }
+.logo-text .accent { color: var(--accent); }
 
 .links a {
   color: var(--fg);
@@ -65,6 +80,14 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-tag {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
 }
 
 .hero h1 {
@@ -117,7 +140,17 @@ h2 {
 
 .shop { border-top: 1px solid #1c1c1c; }
 
-.shop-note { color: var(--muted); margin-bottom: 40px; }
+.series-label {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin: 48px 0 20px;
+}
+
+.series-label:first-of-type { margin-top: 0; }
+
+.shop-note { color: var(--muted); margin-top: 48px; }
 
 .product-grid {
   display: grid;
@@ -129,25 +162,69 @@ h2 {
   background: var(--card);
   border: 1px solid #222;
   padding: 16px;
+  transition: transform 0.2s, border-color 0.2s;
 }
 
-.product-img {
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.product-card img {
+  width: 100%;
   aspect-ratio: 1;
-  background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #151515 10px, #151515 20px);
+  object-fit: cover;
   margin-bottom: 12px;
 }
 
 .product-name {
-  color: var(--muted);
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   letter-spacing: 0.5px;
+}
+
+.product-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.order { border-top: 1px solid #1c1c1c; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.step-num {
+  display: block;
+  color: var(--accent);
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.step p {
+  color: var(--fg);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.paynow-note {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .contact-links {
   margin-top: 24px;
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 16px 32px;
 }
 
 .contact-links a {
