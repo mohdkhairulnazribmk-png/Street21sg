@@ -20,9 +20,25 @@
       <a href="#shop">Shop</a>
       <a href="#order">How to Order</a>
       <a href="#contact">Contact</a>
+      <button id="cart-toggle" class="cart-toggle" aria-label="Open cart">CART <span id="cart-count">0</span></button>
     </nav>
   </div>
 </header>
+
+<div id="cart-overlay" class="cart-overlay"></div>
+<aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+  <div class="cart-header">
+    <h3>YOUR CART</h3>
+    <button id="cart-close" class="cart-close" aria-label="Close cart">&times;</button>
+  </div>
+  <div id="cart-items" class="cart-items">
+    <p class="cart-empty">Your cart is empty. Pick a design and size to get started.</p>
+  </div>
+  <div class="cart-footer">
+    <button id="cart-whatsapp" class="btn cart-whatsapp-btn">Send Order via WhatsApp</button>
+    <button id="cart-clear" class="cart-clear-btn">Clear Cart</button>
+  </div>
+</aside>
 
 <section id="top" class="hero">
   <div class="hero-inner">
@@ -46,54 +62,129 @@
 
     <h3 class="series-label">2026 SERIES — CURRENT COLLECTION</h3>
     <div class="product-grid">
-      <div class="product-card">
+      <div class="product-card" data-name="Take The Risk" data-variant="Oversized Tee · White Only">
         <img src="assets/product-take-the-risk.jpg" alt="Take The Risk — Oversized Tee">
         <p class="product-name">Take The Risk</p>
         <p class="product-meta">Oversized Tee · White Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>XS</option><option>S</option><option>M</option><option>L</option>
+            <option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option><option>5XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="Prove Them Wrong" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-prove-them-wrong.jpg" alt="Prove Them Wrong — Oversized Tee">
         <p class="product-name">Prove Them Wrong</p>
         <p class="product-meta">Oversized Tee · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>XS</option><option>S</option><option>M</option><option>L</option>
+            <option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option><option>5XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="Lion City" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-lion-city.jpg" alt="Lion City — Oversized Tee">
         <p class="product-name">Lion City</p>
         <p class="product-meta">Oversized Tee · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>XS</option><option>S</option><option>M</option><option>L</option>
+            <option>XL</option><option>2XL</option><option>3XL</option><option>4XL</option><option>5XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
     </div>
 
     <h3 class="series-label">2025 SERIES — ORIGINAL COLLECTION</h3>
     <div class="product-grid">
-      <div class="product-card">
+      <div class="product-card" data-name="ST21" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-st21.jpg" alt="ST21 — Oversized Tee">
         <p class="product-name">ST21</p>
         <p class="product-meta">Oversized Tee · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>S</option><option>M</option><option>L</option>
+            <option>XL</option><option>2XL</option><option>3XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="Tawakal" data-variant="Retro Jersey · Black Only">
         <img src="assets/product-tawakal.jpg" alt="Tawakal — Retro Jersey">
         <p class="product-name">Tawakal</p>
         <p class="product-meta">Retro Jersey · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>S</option><option>M</option><option>L</option><option>XL</option>
+            <option>2XL</option><option>3XL</option><option>4XL</option><option>5XL</option><option>6XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="Change Your Mindset" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-change-mindset.jpg" alt="Change Your Mindset — Oversized Tee">
         <p class="product-name">Change Your Mindset</p>
         <p class="product-meta">Oversized Tee · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="Better Future" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-better-future.jpg" alt="Better Future — Oversized Tee">
         <p class="product-name">Better Future</p>
         <p class="product-meta">Oversized Tee · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="ST21 Intro" data-variant="Oversized Tee · Black &amp; White">
         <img src="assets/product-st21-intro.jpg" alt="ST21 Intro — Oversized Tee">
         <p class="product-name">ST21 Intro</p>
         <p class="product-meta">Oversized Tee · Black &amp; White</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>S</option><option>M</option><option>L</option>
+            <option>XL</option><option>2XL</option><option>3XL</option>
+          </select>
+          <select class="color-select">
+            <option value="">Color</option>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
-      <div class="product-card">
+      <div class="product-card" data-name="ST21 NFL Jersey" data-variant="NFL Jersey · Black Only">
         <img src="assets/product-nfl-jersey.jpg" alt="ST21 NFL Jersey">
         <p class="product-name">ST21 NFL Jersey</p>
         <p class="product-meta">NFL Jersey · Black Only</p>
+        <div class="product-actions">
+          <select class="size-select">
+            <option value="">Size</option>
+            <option>S</option><option>M</option><option>L</option>
+            <option>XL</option><option>2XL</option><option>3XL</option>
+          </select>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
       </div>
     </div>
 
@@ -132,5 +223,6 @@
   <p>&copy; 2026 STREET21SG — Singapore · Hustle. Growth. Style.</p>
 </footer>
 
+<script src="cart.js"></script>
 </body>
 </html>
