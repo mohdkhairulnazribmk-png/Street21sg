@@ -45,6 +45,12 @@
   </div>
 </aside>
 
+<div id="sizechart-overlay" class="sizechart-overlay"></div>
+<div id="sizechart-modal" class="sizechart-modal" aria-hidden="true">
+  <button id="sizechart-close" class="sizechart-close" aria-label="Close size chart">&times;</button>
+  <img id="sizechart-img" src="" alt="Size chart">
+</div>
+
 <section id="top" class="hero">
   <div class="hero-inner">
     <div class="hero-logo">
@@ -83,6 +89,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/take-the-risk.jpg" data-title="Take The Risk">Size Chart</button>
       </div>
       <div class="product-card" data-name="Prove Them Wrong" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-prove-them-wrong.jpg" alt="Prove Them Wrong — Oversized Tee">
@@ -96,6 +103,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/prove-them-wrong.jpg" data-title="Prove Them Wrong">Size Chart</button>
       </div>
       <div class="product-card" data-name="Lion City" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-lion-city.jpg" alt="Lion City — Oversized Tee">
@@ -109,6 +117,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/lion-city.jpg" data-title="Lion City">Size Chart</button>
       </div>
     </div>
 
@@ -126,6 +135,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/st21.jpg" data-title="ST21">Size Chart</button>
       </div>
       <div class="product-card" data-name="Tawakal" data-variant="Retro Jersey · Black Only">
         <img src="assets/product-tawakal.jpg" alt="Tawakal — Retro Jersey">
@@ -139,6 +149,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/tawakal.jpg" data-title="Tawakal">Size Chart</button>
       </div>
       <div class="product-card" data-name="Change Your Mindset" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-change-mindset.jpg" alt="Change Your Mindset — Oversized Tee">
@@ -151,6 +162,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/change-mindset.jpg" data-title="Change Your Mindset">Size Chart</button>
       </div>
       <div class="product-card" data-name="Better Future" data-variant="Oversized Tee · Black Only">
         <img src="assets/product-better-future.jpg" alt="Better Future — Oversized Tee">
@@ -163,6 +175,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/better-future.jpg" data-title="Better Future">Size Chart</button>
       </div>
       <div class="product-card" data-name="ST21 Intro" data-variant="Oversized Tee · Black &amp; White">
         <img src="assets/product-st21-intro.jpg" alt="ST21 Intro — Oversized Tee">
@@ -172,7 +185,7 @@
           <select class="size-select">
             <option value="">Size</option>
             <option>S</option><option>M</option><option>L</option>
-            <option>XL</option><option>2XL</option><option>3XL</option>
+            <option>XL</option><option>2XL</option>
           </select>
           <select class="color-select">
             <option value="">Color</option>
@@ -181,6 +194,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/st21-intro.jpg" data-title="ST21 Intro">Size Chart</button>
       </div>
       <div class="product-card" data-name="ST21 NFL Jersey" data-variant="NFL Jersey · Black Only">
         <img src="assets/product-nfl-jersey.jpg" alt="ST21 NFL Jersey">
@@ -194,6 +208,7 @@
           </select>
           <button class="add-to-cart-btn">Add to Cart</button>
         </div>
+        <button class="size-chart-btn" data-chart="assets/sizecharts/nfl-jersey.jpg" data-title="ST21 NFL Jersey">Size Chart</button>
       </div>
     </div>
 
@@ -288,6 +303,36 @@
       menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
+})();
+
+(function () {
+  const overlay = document.getElementById('sizechart-overlay');
+  const modal = document.getElementById('sizechart-modal');
+  const img = document.getElementById('sizechart-img');
+  const closeBtn = document.getElementById('sizechart-close');
+
+  function open(src, title) {
+    img.src = src;
+    img.alt = title + ' size chart';
+    overlay.classList.add('open');
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+  }
+
+  function close() {
+    overlay.classList.remove('open');
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+  }
+
+  document.querySelectorAll('.size-chart-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      open(btn.dataset.chart, btn.dataset.title);
+    });
+  });
+
+  overlay.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
 })();
 </script>
 <script src="cart.js"></script>
