@@ -48,13 +48,10 @@ body {
   object-fit: cover;
 }
 
-.logo-text {
-  font-weight: 900;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
+.logo-wordmark {
+  height: 30px;
+  width: auto;
 }
-
-.logo-text .accent { color: var(--accent); }
 
 .links a {
   color: var(--fg);
