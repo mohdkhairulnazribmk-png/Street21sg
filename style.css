@@ -236,6 +236,13 @@ h2 {
 
 .tiktok { border-top: 1px solid #1c1c1c; }
 
+.social-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 560px;
+}
+
 .tiktok-profile-card {
   display: flex;
   align-items: center;
@@ -245,7 +252,6 @@ h2 {
   padding: 24px;
   text-decoration: none;
   color: var(--fg);
-  max-width: 560px;
   transition: border-color 0.2s;
   flex-wrap: wrap;
 }
