@@ -15,13 +15,18 @@
       <img src="assets/logo.jpg" alt="STREET21SG" class="logo-badge">
       <img src="assets/logo-wordmark.png" alt="Street21 Streetwear" class="logo-wordmark">
     </a>
-    <nav class="links">
-      <a href="#about">About</a>
-      <a href="#shop">Shop</a>
-      <a href="#order">How to Order</a>
-      <a href="#contact">Contact</a>
+    <div class="nav-right">
+      <nav class="links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#shop">Shop</a>
+        <a href="#order">How to Order</a>
+        <a href="#contact">Contact</a>
+      </nav>
       <button id="cart-toggle" class="cart-toggle" aria-label="Open cart">CART <span id="cart-count">0</span></button>
-    </nav>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -269,6 +274,22 @@
 </footer>
 
 <script async src="https://www.tiktok.com/embed.js"></script>
+<script>
+(function () {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
 <script src="cart.js"></script>
 </body>
 </html>
