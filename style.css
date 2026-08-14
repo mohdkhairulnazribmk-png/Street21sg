@@ -39,6 +39,7 @@ body {
   gap: 10px;
   text-decoration: none;
   color: var(--fg);
+  margin-left: 16px;
 }
 
 .logo-badge {
@@ -77,6 +78,25 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.hero-logo-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-logo-wordmark {
+  height: 52px;
+  width: auto;
 }
 
 .hero-tag {
