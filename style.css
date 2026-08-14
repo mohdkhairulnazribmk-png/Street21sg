@@ -39,7 +39,7 @@ body {
   gap: 10px;
   text-decoration: none;
   color: var(--fg);
-  margin-left: 16px;
+  margin-left: 4px;
 }
 
 .logo-badge {
