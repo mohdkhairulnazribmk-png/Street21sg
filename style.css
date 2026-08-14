@@ -257,33 +257,11 @@ h2 {
   gap: 20px;
 }
 
-.tiktok-card {
-  display: block;
-  background: var(--card);
-  border: 1px solid #222;
-  text-decoration: none;
-  color: var(--fg);
-  overflow: hidden;
-  transition: transform 0.2s, border-color 0.2s;
-}
-
-.tiktok-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-}
-
-.tiktok-card img {
-  width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  display: block;
-}
-
-.tiktok-caption {
-  padding: 12px;
-  font-size: 0.8rem;
-  color: var(--muted);
-  line-height: 1.4;
+.tiktok-grid blockquote.tiktok-embed {
+  margin: 0 !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 @media (max-width: 900px) {
