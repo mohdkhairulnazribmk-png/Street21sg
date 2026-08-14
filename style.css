@@ -138,13 +138,6 @@ h2 {
 
 .about p, .contact p { color: var(--muted); max-width: 600px; font-size: 1.05rem; }
 
-.about-quote {
-  margin-top: 24px;
-  padding-left: 20px;
-  border-left: 2px solid var(--accent);
-  font-style: italic;
-}
-
 .shop { border-top: 1px solid #1c1c1c; }
 
 .series-label {
