@@ -69,7 +69,18 @@
     }
     saveCart();
     renderCart();
-    openCart();
+    showAddedFeedback(card);
+  }
+
+  function showAddedFeedback(card) {
+    const btn = card.querySelector('.add-to-cart-btn');
+    const original = btn.textContent;
+    btn.textContent = 'Added ✓';
+    btn.classList.add('added');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('added');
+    }, 1200);
   }
 
   function changeQty(key, delta) {
