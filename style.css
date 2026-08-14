@@ -83,19 +83,22 @@ body {
 .hero-logo {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 40px;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
 .hero-logo-badge {
-  width: 72px;
-  height: 72px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .hero-logo-wordmark {
-  height: 52px;
+  height: 80px;
   width: auto;
 }
 
