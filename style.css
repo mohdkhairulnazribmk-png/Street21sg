@@ -236,59 +236,58 @@ h2 {
 
 .tiktok { border-top: 1px solid #1c1c1c; }
 
-.tiktok-sub {
-  color: var(--muted);
-  margin-bottom: 32px;
-}
-
-.tiktok-sub a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.tiktok-sub a:hover { text-decoration: underline; }
-
-.tiktok-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.tiktok-profile-card {
+  display: flex;
+  align-items: center;
   gap: 20px;
-}
-
-.tiktok-card {
-  display: block;
   background: var(--card);
   border: 1px solid #222;
+  padding: 24px;
   text-decoration: none;
   color: var(--fg);
-  overflow: hidden;
-  transition: transform 0.2s, border-color 0.2s;
+  max-width: 560px;
+  transition: border-color 0.2s;
+  flex-wrap: wrap;
 }
 
-.tiktok-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent);
-}
+.tiktok-profile-card:hover { border-color: var(--accent); }
 
-.tiktok-card img {
-  width: 100%;
-  aspect-ratio: 9 / 16;
+.tiktok-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   object-fit: cover;
-  display: block;
+  flex-shrink: 0;
 }
 
-.tiktok-caption {
-  padding: 12px;
+.tiktok-profile-info { flex: 1; min-width: 160px; }
+
+.tiktok-profile-name {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tiktok-profile-handle {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 2px;
+}
+
+.tiktok-profile-stats {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
   font-size: 0.8rem;
   color: var(--muted);
-  line-height: 1.4;
 }
 
-@media (max-width: 900px) {
-  .tiktok-grid { grid-template-columns: repeat(2, 1fr); }
-}
+.tiktok-profile-stats strong { color: var(--fg); }
 
-@media (max-width: 520px) {
-  .tiktok-grid { grid-template-columns: 1fr; }
+.tiktok-visit-btn {
+  margin-top: 0;
+  padding: 12px 22px;
+  font-size: 0.8rem;
 }
 
 .footer {
