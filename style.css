@@ -193,6 +193,24 @@ body::before {
   text-transform: uppercase;
 }
 
+.hero h1 .line {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroLineIn 0.8s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.hero h1 .line:nth-of-type(1) { animation-delay: 0.1s; }
+.hero h1 .line:nth-of-type(2) { animation-delay: 0.3s; }
+.hero h1 .line:nth-of-type(3) { animation-delay: 0.5s; }
+
+@keyframes heroLineIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-sub {
   margin-top: 24px;
   color: var(--muted);
