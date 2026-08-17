@@ -23,7 +23,7 @@ body::before {
   background-image: url('assets/logo.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: min(700px, 80vw);
+  background-size: min(1100px, 110vw);
   opacity: 0.05;
   pointer-events: none;
 }
