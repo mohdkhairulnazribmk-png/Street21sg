@@ -415,6 +415,18 @@ h2 {
   font-size: 1.05rem;
 }
 
+.paynow-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.paynow-logo {
+  height: 20px;
+  width: auto;
+}
+
 .payment-thanks {
   color: var(--fg) !important;
   font-weight: 700;
