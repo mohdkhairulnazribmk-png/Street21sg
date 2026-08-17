@@ -385,10 +385,33 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-.paynow-note {
-  margin-top: 24px;
+.payment-details p {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.payment-details p strong {
+  color: var(--fg);
+  font-size: 1.05rem;
+}
+
+.payment-thanks {
+  color: var(--fg) !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.payment-tag {
+  display: inline-block;
+  background: var(--fg);
+  color: var(--bg);
+  font-weight: 900;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  text-transform: uppercase;
 }
 
 .contact-links {
