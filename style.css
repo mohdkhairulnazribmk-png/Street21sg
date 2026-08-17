@@ -517,6 +517,12 @@ h2 {
 
 .tiktok-profile-stats strong { color: var(--fg); }
 
+.tiktok-shop-note {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--accent);
+}
+
 .tiktok-visit-btn {
   margin-top: 0;
   padding: 12px 22px;
