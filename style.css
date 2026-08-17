@@ -266,7 +266,8 @@ h2 {
 .product-card img {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
+  object-fit: contain;
+  background: #000;
   margin-bottom: 12px;
 }
 
